@@ -1,0 +1,60 @@
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+
+public class performance {
+    public static void main(String[] args){
+	System.out.println("main");
+	try{
+	    File file = new File("./TMP2.txt");
+	    BufferedReader br = new BufferedReader(new FileReader(file));
+
+	    String str = br.readLine();
+
+	    String regex ="[0-9]";
+	    Pattern p = Pattern.compile(regex);
+	    double sum = 0.0;
+	    int count = 0;
+
+	    while(str != null){
+		System.out.println("read line =>  " + str);
+
+		//String temp = str.replaceAll("[^0-9]","");
+		//System.out.println("after replace " + temp);
+		Matcher m = p.matcher(str);
+		if (m.find()){
+		    count++;
+		    int start = m.start();
+		    String tmp = str.substring(start);
+		    System.out.println("取り出し文字列->" + tmp);
+		    double evaluation = Double.parseDouble(tmp);
+		    System.out.println("数値変換->" + evaluation);
+
+		    sum = sum + evaluation;
+		    //System.out.println("マッチしました:index = "+start);
+		    //String matchstr = m.group();
+		    //System.out.println(matchstr + "の部分にマッチしました");
+		    
+		}
+
+		//int index = str.indexOf("1");
+		//index += "[0-9]".length();
+		//System.out.println("index="+index);
+		
+		str = br.readLine();
+	    }
+	    
+	    br.close();
+	    System.out.println(count + "回平均 =  "+ sum/count);
+	}catch(FileNotFoundException e){
+	    System.out.println(e);
+	}catch(IOException e){
+	    System.out.println(e);
+	}
+    }
+}

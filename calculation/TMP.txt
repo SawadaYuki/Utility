@@ -1,0 +1,10 @@
+realSec = 136.207
+realSec = 138.397
+realSec = 136.943
+
+realSec = 136.703
+realSec = 137.845
+realSec = 28.8397 
+realSec = 138.264
+realSec = 135.139
+realSec = 136.535
