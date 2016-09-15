@@ -34,6 +34,7 @@
 -- 注)検索キーワードはユーザーがcalc-stdout.sh内のsearchStrを適宜設定
 >ex) searchStr = "execution time"
 
+
 ##calc-by-file.sh
 - 実行プログラムが計測結果をファイルに出力する形式の場合
 -- ファイルから計測結果が記載されている行を抽出 & ファイルに書き込む
@@ -49,5 +50,10 @@
 >ex) find 検索dir -name 検索ファイル名
 
 
-
+#おまけ
+- performanceプログラムはjavaプログラムのため，linux,windows,androis OS,ios,どのOSでも動くはず
+- スクリプト(.sh)はlinux(android os,ios)でしか動かないのでwindowsの上で使用する場合は.bat版を作る必要がある
+- 計測系は夜や深夜に自動にやってくれるのが楽
+-- ある時間にプログラムを走らせる方法
+> linux系 windows 系　両方) atコマンド
 
