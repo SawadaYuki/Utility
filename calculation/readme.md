@@ -10,13 +10,16 @@
 ```
 # java performance file
 ```
--- file内の形式は以下のようになっていること
+- file内の形式は以下のようになっていること
 >ex)
->execution time = ~sec
->execution time = ~sec
->.
->.
->.
+
+```
+execution time = ~sec
+execution time = ~sec
+.
+.
+.
+```
 
 - sample実行
 ```
